@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<hr/>
+<script>
+    function Calculate() {
+        var r = Number(document.getElementById("txtrno").value);
+        var n = document.getElementById("txtname").value;
+        var e = Number(document.getElementById("txtenglish").value);
+        var m = Number(document.getElementById("txtmaths").value);
+        var s = Number(document.getElementById("txtscience").value);
+        var total = e + m + s;
+
+        document.getElementById("mydv").innerHTML = "<h2>total=" + total + "</h2>";
+
+    }
+</script>
+
+<table>
+    <tr>
+        <td>Roll No</td>
+        <td><input type="text" id="txtrno" /></td>
+    </tr>
+    <tr>
+        <td>Student Name</td>
+        <td><input type="text" id="txtname" /></td>
+    </tr>
+    <tr>
+        <td>English</td>
+        <td><input type="text" id="txtenglish" /></td>
+    </tr>
+    <tr>
+        <td>Maths</td>
+        <td><input type="text" id="txtmaths" /></td>
+    </tr>
+    <tr>
+        <td>Science</td>
+        <td><input type="text" id="txtscience" /></td>
+    </tr>
+    <tr>
+
+        <td colspan="2">
+            <input type="button" value="Calculate" onclick="Calculate()" />
+        </td>
+    </tr>
+</table>
+<hr />
+<div id="mydv"></div>
